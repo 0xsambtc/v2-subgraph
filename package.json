@@ -1,0 +1,36 @@
+{
+  "name": "uniswap-v2-subgraph",
+  "version": "1.0.0",
+  "repository": "https://github.com/JOKER-PROTOCOL/uni-v2-subgraph.git",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "codegen": "graph codegen --output-dir src/types/",
+    "build": "graph build",
+    "prepare:merlin": "mustache config/merlin.json .config.ts > src/config.ts & mustache config/merlin.json subgraph.template.yaml > subgraph.yaml",
+    "deploy:merlin": "graph deploy -i https://ipfs.network.thegraph.com --node https://merlin.graph.async.finance/admin async/swap",
+    "create:merlin": "graph create --node https://merlin.graph.async.finance/admin async/swap",
+    "prepare:merlin-testnet": "mustache config/merlin-testnet.json .config.ts > src/config.ts & mustache config/merlin-testnet.json subgraph.template.yaml > subgraph.yaml",
+    "deploy:merlin-testnet": "graph deploy -i https://ipfs.network.thegraph.com --node https://dev-merlin-testnet.graph.async.finance/admin samuel/v2-test-merlin",
+    "create:merlin-testnet": "graph create --node https://dev-merlin-testnet.graph.async.finance/admin samuel/v2-test-merlin",
+    "prepare:zklink-testnet": "mustache config/zklink-testnet.json .config.ts > src/config.ts & mustache config/zklink-testnet.json subgraph.template.yaml > subgraph.yaml",
+    "deploy:zklink-testnet": "graph deploy -i https://ipfs.network.thegraph.com --node https://dev-zklink-testnet.graph.async.finance/admin samuel/zklink-testnet-v2",
+    "create:zklink-testnet": "graph create --node https://dev-zklink-testnet.graph.async.finance/admin samuel/zklink-testnet-v2",
+    "prepare:zklink": "mustache config/zklink.json .config.ts > src/config.ts & mustache config/zklink.json subgraph.template.yaml > subgraph.yaml",
+    "deploy:zklink": "graph deploy -i https://ipfs.network.thegraph.com --node https://zklink.graph.async.finance/admin async/swap",
+    "create:zklink": "graph create --node https://zklink.graph.async.finance/admin async/swap"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-ts": "^0.33.0",
+    "dotenv": "^16.4.5",
+    "mustache": "^4.2.0"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.68.3",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.2"
+  }
+}

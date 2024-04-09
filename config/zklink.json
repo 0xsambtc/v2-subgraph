@@ -1,0 +1,15 @@
+{
+  "network": "zklink",
+  "address": "0xAc50deA59456e1de94bd3068B4d152499dBe0C30",
+  "block": 324501,
+  "weth": "0x1dcE3B3d695e3de0C8CC9190942098B4CC443b60",
+  "usdt": "0x0000000000000000000000000000000000000000",
+  "usdt_weth_pair": "0x0000000000000000000000000000000000000000",
+  "usdt_weth_pair_weth_pos_is_0": "true",
+  "usdc": "0x7581469cb53E786F39ff26E8aF6Fd750213dAcEd",
+  "usdc_weth_pair": "0x05a940005f7b21572b7b42c92ebb5dd346b25c1d",
+  "usdc_weth_pair_weth_pos_is_0": "true",
+  "dai": "0x0000000000000000000000000000000000000000",
+  "dai_weth_pair": "0x0000000000000000000000000000000000000000",
+  "dai_weth_pair_weth_pos_is_0": "true"
+}
