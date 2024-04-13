@@ -6,9 +6,9 @@
   "usdt": "0x0000000000000000000000000000000000000000",
   "usdt_weth_pair": "0x0000000000000000000000000000000000000000",
   "usdt_weth_pair_weth_pos_is_0": "true",
-  "usdc": "0x0000000000000000000000000000000000000000",
-  "usdc_weth_pair": "0x0000000000000000000000000000000000000000",
-  "usdc_weth_pair_weth_pos_is_0": "true",
+  "usdc": "0x849F9892886cCe24FB89F007b72d946D5e5Ac8a9",
+  "usdc_weth_pair": "0xacb59f44024570eb396f5c8bf5e3a5851b736fcb",
+  "usdc_weth_pair_weth_pos_is_0": "false",
   "dai": "0x0000000000000000000000000000000000000000",
   "dai_weth_pair": "0x0000000000000000000000000000000000000000",
   "dai_weth_pair_weth_pos_is_0": "true"
