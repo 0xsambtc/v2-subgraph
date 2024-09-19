@@ -61,7 +61,6 @@ export function getEthPriceInUSD(): BigDecimal {
     return daiPairEthPrice.times(daiWeight).plus(usdcPairEthPrice.times(usdcWeight))
     // USDC is the only pair so far
   } else if (usdcPair !== null) {
-    log.error('usdc pair token 1 price -> {}', [usdcPair.token1Price.toString()]);
     return usdcPairEthPrice
   } else {
     return ZERO_BD
@@ -74,13 +73,15 @@ let WHITELIST: string[] = [
   USDC_ADDRESS,
   USDT_ADDRESS,
   DAI_ADDRESS,
+  // '0x5c46bff4b38dc1eae09c5bac65872a1d8bc87378', // merl
+  // '0xad6ca80fe4d3c54f6433ff725d744772aae87711', // woo
 ]
 
 // minimum liquidity required to count towards tracked volume for pairs with small # of Lps
-let MINIMUM_USD_THRESHOLD_NEW_PAIRS = BigDecimal.fromString('400000')
+let MINIMUM_USD_THRESHOLD_NEW_PAIRS = BigDecimal.fromString('4')
 
 // minimum liquidity for price to get tracked
-let MINIMUM_LIQUIDITY_THRESHOLD_ETH = BigDecimal.fromString('0.0002')
+let MINIMUM_LIQUIDITY_THRESHOLD_ETH = BigDecimal.fromString('0.00000000000000001')
 
 /**
  * Search through graph to find derived Eth per token.

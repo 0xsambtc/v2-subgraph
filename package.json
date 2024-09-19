@@ -17,7 +17,10 @@
     "create:zklink-testnet": "graph create --node https://dev-zklink-testnet.graph.async.finance/admin samuel/zklink-testnet-v2",
     "prepare:zklink": "mustache config/zklink.json .config.ts > src/config.ts & mustache config/zklink.json subgraph.template.yaml > subgraph.yaml",
     "deploy:zklink": "graph deploy -i https://ipfs.network.thegraph.com --node https://zklink.graph.async.finance/admin async/swap",
-    "create:zklink": "graph create --node https://zklink.graph.async.finance/admin async/swap"
+    "create:zklink": "graph create --node https://zklink.graph.async.finance/admin async/swap",
+    "prepare:mantle": "mustache config/mantle.json .config.ts > src/config.ts & mustache config/mantle.json subgraph.template.yaml > subgraph.yaml",
+    "deploy:mantle": "graph deploy -i https://subgraph-api.mantle.xyz/ipfs --node https://subgraph-api.mantle.xyz/deploy async/swap",
+    "create:mantle": "graph create --node https://subgraph-api.mantle.xyz/deploy async/swap"
   },
   "dependencies": {
     "@graphprotocol/graph-ts": "^0.33.0",
